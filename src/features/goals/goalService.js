@@ -12,7 +12,7 @@ const createGoal = async (goalData, token) => {
         }
     }
 
-    const response = await axios.post('https://goalsetter-api-xz81.onrender.com' + API_URL, goalData, config)
+    const response = await axios.post(API_URL, goalData, config)
 
     return response.data;
 }
@@ -23,7 +23,7 @@ const getGoals = async (token) => {
         }
     }
 
-    const response = await axios.get('https://goalsetter-api-xz81.onrender.com' + API_URL, config)
+    const response = await axios.get(API_URL, config)
 
     return response.data;
 }
@@ -34,7 +34,7 @@ const deleteGoal = async (goalId, token) => {
         }
     }
 
-    const response = await axios.delete('https://goalsetter-api-xz81.onrender.com' + API_URL + goalId, config)
+    const response = await axios.delete(API_URL + goalId, config)
 
     return response.data;
 }
